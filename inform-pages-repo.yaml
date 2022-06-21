@@ -14,7 +14,6 @@ on:
 jobs:
   inform:
     name: Inform Pages Repo
-    runs-on: ubuntu-latest
     # Set some sort of timeout in the event of run-away builds.  We are limited on concurrent jobs so, get rid of them.
     timeout-minutes: 10
     steps:
@@ -24,4 +23,3 @@ jobs:
         with:
           token: ${{ secrets.BOT_PAT }}
           repository: 'open-goal/open-goal.github.io'
-          event-type: updateProgress
